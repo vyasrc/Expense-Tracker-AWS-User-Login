@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.asnim.vyas.myapplication">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:fullBackupContent="true"
+
+        android:theme="@style/AppTheme"
+        tools:targetApi="m">
+        <uses-library android:name ="org.apache.http.legacy" android:required ="false"/>
+
+        <activity android:name="com.asnim.vyas.myapplication.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+            <intent-filter>
+
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http"
+                    android:host="www.google.com" />
+
+            </intent-filter>
+
+        </activity>
+
+
+
+
+        <activity android:name="com.asnim.vyas.myapplication.Insert" />
+        <activity android:name="com.asnim.vyas.myapplication.Menu" />
+        <activity android:name="com.asnim.vyas.myapplication.Total" />
+        <activity android:name="com.asnim.vyas.myapplication.Update" />
+        <activity android:name="com.asnim.vyas.myapplication.Delete" />
+    </application>
+
+</manifest>
